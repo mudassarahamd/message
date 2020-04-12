@@ -1,6 +1,5 @@
 <h4 class="ui center aligned medium icon header">
-  <br>
-  Howl at Me ~_~ A Secret Chat App
+
   <i class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQJcze_OF5kV0ET9SZpESgHoNPI_LoG9P9lsiL-mWVO63WzcWwD&usqp=CAU" width="125" height="125"></img></i>
   It's Secret
 </h4>
@@ -11,34 +10,15 @@
       <div class="content">
         <div class="ui feed">
           <h4 class="ui header">MESSAGES</h4>
+          <% @messages.each do |message| %>
           <div class="event">
             <div class="content">
               <div class="summary">
-                 <em>Elliot Fu</em> : Test Message
+                 <em><%= message.user.username %></em>:: <%= message.body %>
               </div>
             </div>
           </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <em>Stevie Feliciano</em> : Test Message
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <em>Helen Troy</em> : Test Message
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <em>Christian Rocha</em> : Test Message
-              </div>
-            </div>
-          </div>
+          <%end%>
         </div>
       </div>
       <div class="extra content">
